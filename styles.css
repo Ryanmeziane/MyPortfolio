@@ -3,23 +3,52 @@ body, html {
     padding: 0;
     scroll-behavior: smooth;
     font-family: 'Arial', sans-serif;
-    background: #606060;
+    background: #9d9d9d;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 10px 20px;
+    height: 75px;
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 47%;
+    height: 500px;
+    background-color: #1e1e1e;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
-    margin: 0;
-    text-align: center;
-    flex-basis: 0;
-    flex-grow: 1;
+    margin-right: auto;
+}
+
+a {
+    font-size: 20px;
+    color: greenyellow;
+    font-weight: bold;
 }
 
 .portfolio-section {
@@ -27,15 +56,11 @@ h1 {
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     will-change: opacity, transform;
-    padding: 100px 20px;
+    padding: 60px 20px;
     text-align: center;
-    min-height: 100vh;
-    background: #424242;
-    color:#cdcdcd
-}
-
-.portfolio-section:nth-child(even) {
+    min-height: 75vh;
     background: #212121;
+    color:#cdcdcd;
 }
 
 .portfolio-section:nth-child(odd) {
@@ -47,7 +72,6 @@ h2 {
 }
 
 .header-btn {
-    margin: 0 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -56,6 +80,8 @@ h2 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 120px;
+    margin: 0 10px;
 }
 
 .header-btn:hover {
@@ -63,10 +89,136 @@ h2 {
 }
 
 
-.quarter-width {
-    flex: 0 0 25%;
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
 }
 
-.three-quarters-width {
-    flex: 0 0 25%;
+.rain {
+    position: absolute;
+    top: -20px;
+    color: greenyellow;
+    opacity: 0;
+    animation: rainAnimation 2s linear forwards;
+    z-index: 1;
 }
+
+@keyframes rainAnimation {
+    0% {
+        top: -20px;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+#about-me-content {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    color: #ffffff;
+}
+
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 20px;
+    color: white;
+    animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+.mac-terminal {
+    background-color: black;
+    color: greenyellow;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    width: 100%;
+    min-height: 750px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    text-align: left;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: auto;
+    z-index: 2; 
+}
+
+.mac-terminal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6%;
+    background-color: #666666;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: 2;
+}
+
+
+.window-controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+}
+
+.control {
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    
+}
+
+.control.red {
+    background-color: #ff605c;
+}
+
+.control.yellow {
+    background-color: #ffbd44;
+}
+
+.control.green {
+    background-color: #00ca4e;
+}
+
+.terminal-content {
+    white-space: pre;
+    overflow: auto;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+.blinking-cursor {
+    animation: blink 1s step-start infinite;
+}
+
+.parent-selector {
+    position: relative;
+}
+
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
