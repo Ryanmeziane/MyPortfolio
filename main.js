@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rainDiv = document.createElement('div');
         rainDiv.classList.add('rain');
         rainDiv.innerText = Math.random() < 0.5 ? '|' : '|';
-        rainDiv.style.left = Math.random() * (window.innerWidth - 40) + 'px';
+        rainDiv.style.left = Math.random() * (window.innerWidth - 45) + 'px';
         document.body.appendChild(rainDiv);
 
         setTimeout(() => {
