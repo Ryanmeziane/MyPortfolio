@@ -17,22 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const createRain = () => {
-        const rainDiv = document.createElement('div');
-        rainDiv.classList.add('rain');
-        rainDiv.innerText = Math.random() < 0.5 ? '1' : '0';
-        rainDiv.style.left = Math.random() * (window.innerWidth - 45) + 'px';
-        rainDiv.style.zIndex = 1;
-        document.body.appendChild(rainDiv);
+// document.addEventListener('DOMContentLoaded', () => {
+//     const createRain = () => {
+//         const rainDiv = document.createElement('div');
+//         rainDiv.classList.add('rain');
+//         rainDiv.innerText = Math.random() < 0.5 ? '1' : '0';
+//         rainDiv.style.left = Math.random() * (window.innerWidth - 45) + 'px';
+//         rainDiv.style.zIndex = 1;
+//         document.body.appendChild(rainDiv);
 
-        setTimeout(() => {
-            rainDiv.remove();
-        }, 2000);
-    };
+//         setTimeout(() => {
+//             rainDiv.remove();
+//         }, 2000);
+//     };
 
-    setInterval(createRain, 50);
-});
+//     setInterval(createRain, 50);
+// });
 
 document.addEventListener('DOMContentLoaded', function () {
     const aboutMeText = "\n\nHello! I’m Ryan Meziane, a devoted computer science enthusiast\n" +
