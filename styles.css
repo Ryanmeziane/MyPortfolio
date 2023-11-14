@@ -18,11 +18,10 @@ header {
     height: 75px;
 }
 
-
-
 .row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .column {
@@ -33,6 +32,7 @@ header {
     margin-bottom: 20px;
     margin-top: 50px;
     border-radius: 20px;
+    box-sizing: border-box;
 }
 
 .header-content {
@@ -88,7 +88,6 @@ h2 {
     background-color: #ddd;
 }
 
-
 footer {
     display: flex;
     align-items: center;
@@ -98,49 +97,6 @@ footer {
     padding: 10px 0;
 }
 
-.rain {
-    position: absolute;
-    top: -20px;
-    color: greenyellow;
-    opacity: 0;
-    animation: rainAnimation 2s linear forwards;
-    z-index: 1;
-}
-
-@keyframes rainAnimation {
-    0% {
-        top: -20px;
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        top: 100%;
-        opacity: 0;
-    }
-}
-
-#about-me-content {
-    font-family: 'Courier New', Courier, monospace;
-    white-space: pre;
-    color: #ffffff;
-}
-
-.blinking-cursor {
-    font-weight: 100;
-    font-size: 20px;
-    color: white;
-    animation: blinking 1s infinite;
-}
-
-@keyframes blinking {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-
 .mac-terminal {
     background-color: black;
     color: greenyellow;
@@ -148,13 +104,12 @@ footer {
     border-radius: 8px;
     width: 100%;
     min-height: 750px;
-    position: relative;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
     text-align: left;
     padding: 20px;
     margin-top: 20px;
     overflow: auto;
-    z-index: 2; 
+    z-index: 5; 
 }
 
 .mac-terminal::before {
@@ -170,7 +125,6 @@ footer {
     z-index: 2;
 }
 
-
 .window-controls {
     position: absolute;
     top: 10px;
@@ -184,7 +138,6 @@ footer {
     border-radius: 50%;
     display: inline-block;
     margin-right: 8px;
-    
 }
 
 .control.red {
@@ -204,8 +157,8 @@ footer {
     overflow: auto;
     padding: 20px;
     margin-top: 30px;
+    z-index: 5; 
 }
-
 
 .blinking-cursor {
     animation: blink 1s step-start infinite;
@@ -215,10 +168,58 @@ footer {
     position: relative;
 }
 
-
 @keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    50% { opacity: 0; }
 }
 
+@media screen and (max-width: 768px) {
+    .header-content, .row {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .portfolio-section {
+        padding: 30px 15px;
+    }
+
+    h1, h2, h3, p, a {
+        font-size: smaller;
+    }
+
+    header, footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mac-terminal {
+        min-height: 500px;
+    }
+
+    .header-content img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .portfolio-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2, h3 {
+        font-size: 20px;
+    }
+
+    p, a {
+        font-size: 16px;
+    }
+
+}
