@@ -39,5 +39,17 @@ document.addEventListener('DOMContentLoaded', function () {
     typeWriter();
 });
 
+function copyEmailToClipboard() {
+    navigator.clipboard.writeText('ryanmeziane@hotmail.com').then(function() {
+        var notification = document.getElementById('copyNotification');
+        notification.style.display = 'inline';
+        setTimeout(function() {
+            notification.style.display = 'none';
+        }, 2000);
+    }, function(err) {
+        console.error('Could not copy text: ', err);
+    });
+}
+
 
 
