@@ -17,34 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const createRain = () => {
-//         const rainDiv = document.createElement('div');
-//         rainDiv.classList.add('rain');
-//         rainDiv.innerText = Math.random() < 0.5 ? '1' : '0';
-//         rainDiv.style.left = Math.random() * (window.innerWidth - 45) + 'px';
-//         rainDiv.style.zIndex = 1;
-//         document.body.appendChild(rainDiv);
-
-//         setTimeout(() => {
-//             rainDiv.remove();
-//         }, 2000);
-//     };
-
-//     setInterval(createRain, 50);
-// });
-
 document.addEventListener('DOMContentLoaded', function () {
-    const aboutMeText = "\n\nHello! I’m Ryan Meziane, a devoted computer science enthusiast\n" +
-        "with a keen interest in blending technology and space exploration.\n" +
-        "As a diligent programmer, I have honed my skills in C#, JavaScript, and Java,\n" +
-        "offering innovative solutions and a comprehensive understanding\nof software development." +
-        "My educational journey in \ncomputer science began at John Abbott College,n" +
-        "where I embraced the\ncomplexities and intricacies of programming.\n" +
-        "I'm driven by the challenges in technology and constantly seek to \npush the boundaries" +
-        "of what's possible in the digital realm.\n\nRyanMeziane:/$ cat info.txt\n" +
-        "Please find contact links located at the top of the page \nfor Linkedin and Github\n\nRyanMeziane:/$";
-    const info = "";
+    const aboutMeText = "\n\nHello! I’m Ryan Meziane, a passionate computer science student deeply fascinated by the mysteries of space and the intricate laws of physics. My journey in computer science is driven by a curiosity to understand how things work, much like the enigmatic cosmos that always seems to intrigue and inspire me. I find immense joy in coding and solving complex problems, believing that every line of code is a small step towards a larger discovery.\n\n" +
+        "My technical skills are rooted in a diverse range of programming languages, including C#, Java, JavaScript, Kotlin, and Python. This broad skill set allows me to approach problems from various angles, crafting solutions that are as efficient as they are creative. Whether I’m developing a robust Java application, designing an interactive website with JavaScript, or exploring data analytics with Python, I bring the same level of enthusiasm and dedication. For me, programming is not just about writing code; it’s about weaving logic and creativity to build something truly remarkable.\n\nRyanMeziane:/$";
     let i = 0;
     const speed = 1;
     const aboutMeContent = document.getElementById('about-me-content');
@@ -56,8 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
             i++;
             setTimeout(typeWriter, speed);
         }
-        else
+        else {
             aboutMeContent.innerHTML += '<span class="blinking-cursor">_</span>';
+        }
     }
 
     typeWriter();

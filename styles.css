@@ -47,8 +47,8 @@ h1 {
 
 a {
     font-size: 20px;
-    color: greenyellow;
     font-weight: bold;
+    font-style: normal;
 }
 
 .portfolio-section {
@@ -56,12 +56,13 @@ a {
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     will-change: opacity, transform;
-    padding: 60px 20px;
+    padding: 60px 20px; /* Adjusted padding for better layout */
     text-align: center;
     min-height: 75vh;
     background: #212121;
     color:#cdcdcd;
 }
+
 
 .portfolio-section:nth-child(odd) {
     background: #323232;
@@ -70,6 +71,36 @@ a {
 h2 {
     margin: 0 0 20px 0;
 }
+
+.contact-info {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: relative;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.contact-info h2 {
+    color: #f0f0f0;
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    display: inline-block;
+    margin: 5px 10px;
+    color: #4d9fef;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #3083cc;
+    text-decoration: underline;
+}
+
 
 .header-btn {
     padding: 10px 20px;
@@ -97,13 +128,40 @@ footer {
     padding: 10px 0;
 }
 
+.project-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 45%; /* Adjusted for better spacing */
+    margin: 20px;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
 .mac-terminal {
     background-color: black;
-    color: greenyellow;
+    color: rgb(47, 255, 50);
     font-family: 'Courier New', Courier, monospace;
     border-radius: 8px;
     width: 100%;
-    min-height: 750px;
+    min-height: 1000px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
     text-align: left;
     position: relative;
@@ -117,7 +175,7 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 6%;
+    height: 40px;
     background-color: #666666;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -171,54 +229,36 @@ footer {
     50% { opacity: 0; }
 }
 
-@media screen and (max-width: 768px) {
-    .header-content, .row {
-        flex-direction: column;
+@media screen and (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    .column {
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
+    .header-content h1 {
+        margin-bottom: 0;
+    }
+
+    .header-content img {
+        width: 75px;
+        height: 75px;
     }
 
     .portfolio-section {
-        padding: 30px 15px;
-    }
-
-    h1, h2, h3, p, a {
-        font-size: smaller;
-    }
-
-    header, footer {
-        flex-direction: column;
-        text-align: center;
+        padding: 60px 40px;
     }
 
     .mac-terminal {
         min-height: 500px;
     }
 
-    .header-content img {
-        width: 80px;
-        height: 80px;
+    .terminal-content {
+        font-size: 23px;
+        line-height: 30px;
     }
 
-    .portfolio-section img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    h2, h3 {
-        font-size: 20px;
-    }
-
-    p, a {
-        font-size: 16px;
+    .project {
+        width: 47%;
     }
 
 }
