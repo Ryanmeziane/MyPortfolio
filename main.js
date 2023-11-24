@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
         paragraph.appendChild(input);
     
-        input.focus();
+        //input.focus();
     }
     
 

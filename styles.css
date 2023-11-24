@@ -8,21 +8,37 @@ body, html {
     align-items: center;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    height: 75px;
-}
+
 
 .row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+header > div {
+    background: #202020;
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Center the main content */
+    align-items: center;
+    height: 60px;
+    text-align: center;
+    position: relative; /* Relative positioning for absolute children */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin */
+}
+
+header a {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
 
 .column {
     width: 47%;
@@ -144,7 +160,6 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Styles for the text input and its container */
 .terminal-line {
     display: flex;
     align-items: center;
@@ -166,18 +181,6 @@ footer {
 
 .blinking-cursor {
     display: inline;
-}
-
-
-/* Hide the input's caret */
-.terminal-input::-webkit-input-placeholder { /* Chrome/Edge/Safari */
-    color: limegreen;
-}
-.terminal-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: limegreen;
-}
-.terminal-input::placeholder {
-    color: limegreen;
 }
 
 
@@ -230,18 +233,18 @@ footer {
     width: 10px;
 }
 
-/* Customizes the scrollbar track (the part the thumb slides along) */
+
 ::-webkit-scrollbar-track {
     background: #000000;
     
 }
 
-/* Customizes the scrollbar thumb (the draggable element) */
+
 ::-webkit-scrollbar-thumb {
     background: #666666;
 }
 
-/* Changes the thumb color when hovered over or clicked */
+
 ::-webkit-scrollbar-thumb:hover {
     background: #666666;
 }
