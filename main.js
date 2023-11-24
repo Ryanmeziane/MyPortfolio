@@ -23,18 +23,33 @@ document.addEventListener('DOMContentLoaded', function () {
     let i = 0;
     const speed = 1;
     const aboutMeContent = document.getElementById('about-me-content');
-    aboutMeContent.innerHTML += "RyanMeziane:/$ cat AboutMe.txt";
+    const paragraph = document.createElement('p');
+    paragraph.innerHTML = "RyanMeziane:/$ cat about-me.txt"
+    aboutMeContent.appendChild(paragraph);
 
     function typeWriter() {
         if (i < aboutMeText.length) {
-            aboutMeContent.innerHTML += aboutMeText.charAt(i);
+            paragraph.innerHTML += aboutMeText.charAt(i);
             i++;
             setTimeout(typeWriter, speed);
         }
         else {
-            aboutMeContent.innerHTML += '<span class="blinking-cursor">_</span>';
+            //paragraph.innerHTML += '<span class="blinking-cursor">_</span>';
+            createTextInput();
         }
     }
+    
+    function createTextInput() {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'terminal-input';
+        input.placeholder = '';
+    
+        paragraph.appendChild(input);
+    
+        input.focus();
+    }
+    
 
     typeWriter();
 });

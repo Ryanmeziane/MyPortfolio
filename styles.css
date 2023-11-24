@@ -135,7 +135,7 @@ footer {
 }
 
 .project {
-    width: 45%; /* Adjusted for better spacing */
+    width: 45%;
     margin: 20px;
     background-color: #1e1e1e;
     padding: 15px;
@@ -143,6 +143,43 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Styles for the text input and its container */
+.terminal-line {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.terminal-input {
+    background-color: transparent;
+    border: none;
+    color: limegreen;
+    font-size: 23px;
+    line-height: 30px;
+    outline: none;
+    margin-left: 5px;
+    word-wrap: break-word; 
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.blinking-cursor {
+    display: inline;
+}
+
+
+/* Hide the input's caret */
+.terminal-input::-webkit-input-placeholder { /* Chrome/Edge/Safari */
+    color: limegreen;
+}
+.terminal-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: limegreen;
+}
+.terminal-input::placeholder {
+    color: limegreen;
+}
+
 
 .project:hover {
     transform: translateY(-10px);
@@ -187,6 +224,26 @@ footer {
     top: 10px;
     left: 10px;
     z-index: 3;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Customizes the scrollbar track (the part the thumb slides along) */
+::-webkit-scrollbar-track {
+    background: #000000;
+    
+}
+
+/* Customizes the scrollbar thumb (the draggable element) */
+::-webkit-scrollbar-thumb {
+    background: #666666;
+}
+
+/* Changes the thumb color when hovered over or clicked */
+::-webkit-scrollbar-thumb:hover {
+    background: #666666;
 }
 
 .control {
@@ -257,8 +314,6 @@ footer {
         line-height: 30px;
     }
 
-    .project {
-        width: 47%;
-    }
+
 
 }
