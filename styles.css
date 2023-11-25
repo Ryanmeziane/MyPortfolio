@@ -20,15 +20,15 @@ header > div {
     background: #202020;
     color: #fff;
     display: flex;
-    justify-content: center; /* Center the main content */
+    justify-content: center;
     align-items: center;
     height: 60px;
     text-align: center;
-    position: relative; /* Relative positioning for absolute children */
+    position: relative;
 }
 
 header h1 {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 header a {
@@ -72,7 +72,7 @@ a {
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     will-change: opacity, transform;
-    padding: 60px 20px; /* Adjusted padding for better layout */
+    padding: 60px 20px;
     text-align: center;
     min-height: 75vh;
     background: #212121;
